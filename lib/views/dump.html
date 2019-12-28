@@ -1,0 +1,21 @@
+<h2>Authorize</h2>
+
+<div class="form">
+  <p>Dump your data</p>
+
+  <form method="POST" action="<%= basePath %>/dump">
+    <p>
+      <label for="username">Username</label>:
+      <input name="username">
+    </p>
+
+    <p>
+      <label for="password">Password</label>:
+      <input type="password" name="password" id="password">
+    </p>
+
+    <p>
+      <input type="submit" name="dump" value="Dump">
+    </p>
+  </form>
+</div>
