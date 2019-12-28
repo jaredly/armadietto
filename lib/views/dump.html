@@ -8,14 +8,28 @@
       <label for="username">Username</label>:
       <input name="username">
     </p>
-
     <p>
       <label for="password">Password</label>:
       <input type="password" name="password" id="password">
     </p>
-
     <p>
-      <input type="submit" name="dump" value="Dump">
+      <input type="submit" name="action" value="Dump">
     </p>
   </form>
+
+  <form method="POST" action="<%= basePath %>/dump">
+    <p>
+      <label for="username">Username</label>:
+      <input name="username">
+    </p>
+    <p>
+      <label for="password">Password</label>:
+      <input type="password" name="password" id="password">
+    </p>
+    <input type="file" name="zip">
+    <p>
+      <input type="submit" name="action" value="Upload">
+    </p>
+  </form>
+
 </div>
