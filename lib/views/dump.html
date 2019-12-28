@@ -1,8 +1,14 @@
-<h2>Authorize</h2>
-
 <div class="form">
-  <p>Dump your data</p>
+  <% if (typeof error !== 'undefined') { %>
+    <p class="error"><%= error %></p>
+  <% } %>
 
+  <% if (typeof message !== 'undefined') { %>
+    <p class="message"><%= message %></p>
+  <% } %>
+
+
+  <h2>Download</h2>
   <form method="POST" action="<%= basePath %>/dump">
     <p>
       <label for="username">Username</label>:
@@ -17,7 +23,8 @@
     </p>
   </form>
 
-  <form method="POST" action="<%= basePath %>/dump">
+  <h2>Upload</h2>
+  <form method="POST" action="<%= basePath %>/dump"  enctype="multipart/form-data">
     <p>
       <label for="username">Username</label>:
       <input name="username">
